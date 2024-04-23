@@ -1,16 +1,47 @@
-# hikari
+<p align="center">
+<img src="https://github.com/yashchittora/hikari/assets/112685991/9bb8d445-689d-4e3a-b554-6727ef9ea9fd" width="300">
+<h1 align="center">Hikari</h1>
+</p>
+<h2 align="center">A simple Notes App made with Flutter</h2>
 
-A new Flutter project.
+Uses minimal external dependencies:
 
-## Getting Started
+  - [Isar:](https://github.com/isar/isar) Super Fast Cross-Platform Database for Flutter
 
-This project is a starting point for a Flutter application.
+## Features ♡
+✅ Saves Notes Locally
 
-A few resources to get you started if this is your first Flutter project:
+✅ No internet requirement
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+✅ Light Mode and Dark Mode
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features to develop 📝
+- [ ] (Trash section - To handle accidental deletions)
+
+## Building from source
+
+To build the app by yourself, follow the following steps.
+
+### Prerequisites
+- Flutter
+- [Chrome](https://www.google.com/chrome/) (For Web)
+- [Visual Studio 2022](https://visualstudio.microsoft.com) (For Windows)
+- [Xcode](https://developer.apple.com/xcode/) (For iOS, macOS, iPadOS)
+
+*Step 1*:
+Clone this repository using
+```bash
+git clone https://github.com/yashchittora/hikari.git
+```
+*Step 2*: Move into the hikari folder and build the app in the required format
+```bash
+cd hikari
+flutter build <ipa/macos/apk/windows>
+```
+
+*Step 3*:
+The compiled app can be found in the build folder
+
+
+
+
