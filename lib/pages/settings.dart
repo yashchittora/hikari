@@ -8,9 +8,6 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    void themer(bool){
-      
-    }
     return Scaffold(
     backgroundColor: Theme.of(context).colorScheme.primary,
       appBar: AppBar(title: Text("Settings"),),
@@ -29,10 +26,10 @@ class SettingsPage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text("Dark Mode"),  
+                    const Text("Dark Mode"),
                     CupertinoSwitch(value: Provider.of<ThemeProvider>(context, listen: false).isDarkMode, onChanged: (value){
                       Provider.of<ThemeProvider>(context, listen: false).toggleThemes();
-                    }),        
+                    }),
                   ],
                 ),
               ),

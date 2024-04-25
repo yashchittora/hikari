@@ -55,11 +55,14 @@ class NoteTile extends StatelessWidget {
                   child: Text(
                     title,
                     overflow: TextOverflow.ellipsis,
-                    maxLines: 1, // Adjust maxLines for desired number of lines
+                    maxLines: 1,
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.onTertiary,
+                    ),// Adjust maxLines for desired number of lines
                   ),
                 ),
               ),
-        
+
               // CHILD 2 ----- Buttons
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 10),
@@ -84,7 +87,7 @@ class NoteTile extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        
+
                         database.deleteNote(id);
                         final snackBar = SnackBar(
                   /// need to set following properties for best effect of awesome_snackbar_content
@@ -120,5 +123,3 @@ class NoteTile extends StatelessWidget {
     );
   }
 }
-
-

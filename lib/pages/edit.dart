@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 
-
 class EditNotePage extends StatelessWidget {
   int id;
   final database;
@@ -28,44 +27,47 @@ class EditNotePage extends StatelessWidget {
       titleController.text = title;
       dataController.text = data;
     }
-      // await database.pullById(id); //this saves data in single_temp object
-      // titleController.text = database.single_temp.noteTitle.toString();
-      // dataController.text = database.single_temp.noteData.toString();
-      //Depreciated method used for fetching data for opening existing note
+    // await database.pullById(id); //this saves data in single_temp object
+    // titleController.text = database.single_temp.noteTitle.toString();
+    // dataController.text = database.single_temp.noteData.toString();
+    //Depreciated method used for fetching data for opening existing note
 
     initer();
     return Scaffold(
         appBar: AppBar(
-          leading: IconButton(tooltip: "Back" , icon: Icon(Icons.arrow_back_ios_rounded),
-          onPressed: () async {
-                  await database.updateNote(id, titleController.text.toString(),
-                      dataController.text.toString());
-                      Navigator.of(context).pop();
-                      final snackBar = SnackBar(
-                    padding: EdgeInsets.all(10),
-                  elevation: 0,
-                  behavior: SnackBarBehavior.floating,
-                  backgroundColor: Colors.transparent,
-                  content: AwesomeSnackbarContent(
-                    title: 'Saved !',
-                    message:
-                        'Your thoughts are safe',
-                    contentType: ContentType.success,
-                  ),
-                );
-
-                ScaffoldMessenger.of(context)
-                  ..hideCurrentSnackBar()
-                  ..showSnackBar(snackBar);
-                },),
+          leading: IconButton(
+            tooltip: "Back",
+            icon: Icon(Icons.arrow_back_ios_rounded),
+            onPressed: () async {
+              await database.updateNote(id, titleController.text.toString(),
+                  dataController.text.toString());
+              Navigator.of(context).pop();
+              // Do something
+              final snackBar = SnackBar(
+                padding: EdgeInsets.all(10),
+                elevation: 0,
+                behavior: SnackBarBehavior.floating,
+                backgroundColor: Colors.transparent,
+                content: AwesomeSnackbarContent(
+                  title: 'Saved !',
+                  message: 'Your thoughts are safe',
+                  contentType: ContentType.success,
+                ),
+              );
+              ScaffoldMessenger.of(context)
+                ..hideCurrentSnackBar()
+                ..showSnackBar(snackBar);
+            },
+          ),
           backgroundColor: Theme.of(context).colorScheme.primary,
           actions: <Widget>[
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: TextButton(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(
-                      Theme.of(context).colorScheme.tertiary), // Set any color you like
+                  backgroundColor: MaterialStateProperty.all(Theme.of(context)
+                      .colorScheme
+                      .tertiary), // Set any color you like
                 ),
                 onPressed: () async {
                   await database.updateNote(id, titleController.text.toString(),
@@ -73,20 +75,18 @@ class EditNotePage extends StatelessWidget {
                   Navigator.of(context).pop();
                   final snackBar = SnackBar(
                     padding: EdgeInsets.all(10),
-                  elevation: 0,
-                  behavior: SnackBarBehavior.floating,
-                  backgroundColor: Colors.transparent,
-                  content: AwesomeSnackbarContent(
-                    title: 'Saved !',
-                    message:
-                        'Your thoughts are safe',
-                    contentType: ContentType.success,
-                  ),
-                );
-
-                ScaffoldMessenger.of(context)
-                  ..hideCurrentSnackBar()
-                  ..showSnackBar(snackBar);
+                    elevation: 0,
+                    behavior: SnackBarBehavior.floating,
+                    backgroundColor: Colors.transparent,
+                    content: AwesomeSnackbarContent(
+                      title: 'Saved !',
+                      message: 'Your thoughts are safe',
+                      contentType: ContentType.success,
+                    ),
+                  );
+                  ScaffoldMessenger.of(context)
+                    ..hideCurrentSnackBar()
+                    ..showSnackBar(snackBar);
                 },
                 child: Row(
                   children: [

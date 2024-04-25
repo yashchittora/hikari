@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           "Hikari",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
@@ -44,14 +44,14 @@ class _HomePageState extends State<HomePage> {
         onPressed: () {
           newNote();
         },
-        child: const Icon(
+        child: Icon(
           Icons.add,
           color: Colors.black,
         ),
       ),
       body: Column(
         children: [
-          const Align(
+          Align(
             alignment: Alignment.topLeft,
             child: Padding(
               padding:
@@ -61,8 +61,11 @@ class _HomePageState extends State<HomePage> {
                 style: TextStyle(
                     // color: Colors.black,
                     fontSize: 40,
-                    fontWeight: FontWeight.w600),
+                    fontWeight: FontWeight.w600,
+                    color: Theme.of(context).colorScheme.onTertiary,
+                    ),
                 textAlign: TextAlign.start,
+
               ),
             ),
           ),
@@ -101,7 +104,7 @@ class _HomePageState extends State<HomePage> {
               child: ListTile(
                 leading: const Icon(Icons.settings),
                 title: const Text("Settings"),
-              
+
                 onTap: (){
                   Navigator.of(context).pop();
                   Navigator.pushNamed(context, '/settingspage');

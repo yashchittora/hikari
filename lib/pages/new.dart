@@ -29,7 +29,7 @@ class NewNotePage extends StatelessWidget {
           onPressed: () async {
                   await database.pushNote(titleController.text.toString(),
                       dataController.text.toString());
-                      
+
                   Navigator.of(context).pop();
                   final snackBar = SnackBar(
                   elevation: 0,
@@ -139,4 +139,3 @@ class NewNotePage extends StatelessWidget {
         ));
   }
 }
-
