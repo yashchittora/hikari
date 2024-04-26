@@ -15,8 +15,7 @@ Uses minimal external dependencies:
 
 ✅ Light Mode and Dark Mode
 
-## Features to develop 📝
-- [ ] (Trash section - To handle accidental deletions)
+✅ Trash Section
 
 ## Building from source
 
