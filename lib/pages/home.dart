@@ -17,6 +17,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     TextEditingController titleController = TextEditingController();
     TextEditingController dataController = TextEditingController();
+
+    //Connecting to database
     final database = context.watch<NoteDatabase>();
     database.pullNotes();
     List<Note> notes = database.current_notes;
@@ -34,7 +36,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Hikari",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
@@ -44,7 +46,7 @@ class _HomePageState extends State<HomePage> {
         onPressed: () {
           newNote();
         },
-        child: Icon(
+        child: const Icon(
           Icons.add,
           color: Colors.black,
         ),
@@ -55,7 +57,7 @@ class _HomePageState extends State<HomePage> {
             alignment: Alignment.topLeft,
             child: Padding(
               padding:
-                  EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
               child: Text(
                 'Your Notes',
                 style: TextStyle(
@@ -108,6 +110,18 @@ class _HomePageState extends State<HomePage> {
                 onTap: (){
                   Navigator.of(context).pop();
                   Navigator.pushNamed(context, '/settingspage');
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                leading: const Icon(Icons.delete),
+                title: const Text("Trash"),
+
+                onTap: (){
+                  Navigator.of(context).pop();
+                  Navigator.pushNamed(context, '/trashpage');
                 },
               ),
             ),

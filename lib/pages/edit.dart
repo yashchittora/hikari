@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_literals_to_create_immutables, use_build_context_synchronously
 
 import 'package:flutter/material.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
@@ -37,14 +37,14 @@ class EditNotePage extends StatelessWidget {
         appBar: AppBar(
           leading: IconButton(
             tooltip: "Back",
-            icon: Icon(Icons.arrow_back_ios_rounded),
+            icon: const Icon(Icons.arrow_back_ios_rounded),
             onPressed: () async {
               await database.updateNote(id, titleController.text.toString(),
                   dataController.text.toString());
               Navigator.of(context).pop();
               // Do something
               final snackBar = SnackBar(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 elevation: 0,
                 behavior: SnackBarBehavior.floating,
                 backgroundColor: Colors.transparent,
@@ -74,7 +74,7 @@ class EditNotePage extends StatelessWidget {
                       dataController.text.toString());
                   Navigator.of(context).pop();
                   final snackBar = SnackBar(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     elevation: 0,
                     behavior: SnackBarBehavior.floating,
                     backgroundColor: Colors.transparent,
@@ -88,7 +88,7 @@ class EditNotePage extends StatelessWidget {
                     ..hideCurrentSnackBar()
                     ..showSnackBar(snackBar);
                 },
-                child: Row(
+                child: const Row(
                   children: [
                     Icon(Icons.check),
                     Text(' Save'),
@@ -106,7 +106,7 @@ class EditNotePage extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: Row(
+                child: const Row(
                   children: [
                     Icon(Icons.cancel),
                     Text(' Cancel'),
@@ -128,10 +128,10 @@ class EditNotePage extends StatelessWidget {
                       TextStyle(fontSize: 32, color: Colors.grey.shade500),
                   // border: InputBorder.none
                 ),
-                style: TextStyle(
+                style:const TextStyle(
                   fontSize: 32,
                 ),
-                scrollPadding: EdgeInsets.all(20.0),
+                scrollPadding:const EdgeInsets.all(20.0),
                 autofocus: true,
               ),
               Expanded(
@@ -141,7 +141,7 @@ class EditNotePage extends StatelessWidget {
                     hintText: "Write something amazing...",
                     hintStyle: TextStyle(color: Colors.grey.shade500),
                     border: InputBorder.none),
-                scrollPadding: EdgeInsets.all(20.0),
+                scrollPadding:const EdgeInsets.all(20.0),
                 autofocus: true,
                 maxLines: 100000,
               ))

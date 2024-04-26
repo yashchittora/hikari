@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:hikari/themes/theme.dart';
 
 class ThemeProvider with ChangeNotifier{

@@ -87,20 +87,19 @@ class NoteTile extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-
-                        database.deleteNote(id);
+                        database.moveToTrash(id);
                         final snackBar = SnackBar(
                   /// need to set following properties for best effect of awesome_snackbar_content
                   elevation: 0,
                   behavior: SnackBarBehavior.floating,
                   backgroundColor: Colors.transparent,
                   content: AwesomeSnackbarContent(
-                    title: 'Deleted !',
+                    title: 'Moved To Trash !',
                     message:
-                        'Your note is deleted !',
+                        'Your note is in trash !',
 
                     /// change contentType to ContentType.success, ContentType.warning or ContentType.help for variants
-                    contentType: ContentType.failure,
+                    contentType: ContentType.warning,
                   ),
                 );
 

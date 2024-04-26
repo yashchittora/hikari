@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_initializing_formals
 import 'package:isar/isar.dart';
 part 'note.g.dart';
 
@@ -13,3 +14,13 @@ class Note{
     this.noteData = noteData;
   }
 }
+
+// @collection
+// class thememode{
+//   Id id = Isar.autoIncrement;
+//   late ThemeData mode;
+  
+//   thememode(ThemeData mode){
+//     this.mode = mode;
+//   }
+// }

@@ -1,13 +1,12 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_literals_to_create_immutables, use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import 'package:hikari/models/crud.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 
 class NewNotePage extends StatelessWidget {
   final database;
 
-  NewNotePage(
+  const NewNotePage(
       {super.key,
       // required this.titleController,
       // required this.dataController,
@@ -25,7 +24,7 @@ class NewNotePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(tooltip: "Back" , icon: Icon(Icons.arrow_back_ios_rounded),
+        leading: IconButton(tooltip: "Back" , icon: const Icon(Icons.arrow_back_ios_rounded),
           onPressed: () async {
                   await database.pushNote(titleController.text.toString(),
                       dataController.text.toString());
@@ -77,7 +76,7 @@ class NewNotePage extends StatelessWidget {
                   ..hideCurrentSnackBar()
                   ..showSnackBar(snackBar);
               },
-                child: Row(
+                child: const Row(
                   children: [
                     Icon(Icons.check),
                     Text(' Save'),
@@ -95,7 +94,7 @@ class NewNotePage extends StatelessWidget {
                 onPressed: (){
                   Navigator.of(context).pop();
                 },
-                child: Row(
+                child: const Row(
                   children: [
                     Icon(Icons.cancel),
                     Text(' Cancel'),
@@ -117,10 +116,10 @@ class NewNotePage extends StatelessWidget {
                       TextStyle(fontSize: 32, color: Colors.grey.shade500),
                   border: InputBorder.none
                 ),
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 32,
                 ),
-                scrollPadding: EdgeInsets.all(20.0),
+                scrollPadding: const EdgeInsets.all(20.0),
                 autofocus: true,
               ),
               Expanded(
@@ -130,7 +129,7 @@ class NewNotePage extends StatelessWidget {
                     hintText: "Write something amazing...",
                     hintStyle: TextStyle(color: Colors.grey.shade500),
                     border: InputBorder.none),
-                scrollPadding: EdgeInsets.all(20.0),
+                scrollPadding:const EdgeInsets.all(20.0),
                 autofocus: true,
                 maxLines: 100000,
               ))

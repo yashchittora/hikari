@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hikari/models/crud.dart';
 import 'package:hikari/pages/home.dart';
 import 'package:hikari/pages/settings.dart';
-import 'package:hikari/themes/theme.dart';
+import 'package:hikari/pages/trash.dart';
 import 'package:hikari/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -25,15 +25,21 @@ void main() async{
 class Hikari extends StatelessWidget {
   const Hikari({super.key});
 
+  
   @override
   Widget build(BuildContext context) {
+  // final database = context.watch<NoteDatabase>();
+  // database.pullNotes();
+  // ThemeData toTheme = database.apptheme;
+  // Provider.of<ThemeProvider>(context).themeData=toTheme;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Hikari",
       home: HomePage(),
-      theme: Provider.of<ThemeProvider>(context) .themeData,
+      theme: Provider.of<ThemeProvider>(context).themeData,
       routes: {
         '/settingspage':(context) => SettingsPage(),
+        '/trashpage':(context) => TrashPage(),
       },
     );
   }
