@@ -4,6 +4,13 @@
 </p>
 <h2 align="center">A simple Notes App made with Flutter</h2>
 
+### - Android
+[![Download](https://img.shields.io/badge/Download-E4405F?style=for-the-badge)](https://github.com/yashchittora/hikari/releases/download/v1.0.0/Hikari.apk)
+
+### - macOS
+[![Download](https://img.shields.io/badge/Download-E4405F?style=for-the-badge)](https://github.com/yashchittora/hikari/releases/download/v1.0.0/Hikari.dmg)
+ 
+
 Uses minimal external dependencies:
 
   - [Isar:](https://github.com/isar/isar) Super Fast Cross-Platform Database for Flutter
