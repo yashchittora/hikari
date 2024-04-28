@@ -24,6 +24,10 @@ Uses minimal external dependencies:
 
 ✅ Trash Section
 
+## Features to add
+[] AutoSave in real time while user is typing
+
+
 ## Building from source
 
 To build the app by yourself, follow the following steps.
