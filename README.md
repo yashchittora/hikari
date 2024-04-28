@@ -25,7 +25,7 @@ Uses minimal external dependencies:
 ✅ Trash Section
 
 ## Features to add
-[] AutoSave in real time while user is typing
+- [ ] AutoSave in real time while user is typing
 
 
 ## Building from source
