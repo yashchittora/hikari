@@ -26,6 +26,7 @@ Uses minimal external dependencies:
 
 ## Features to add
 - [ ] AutoSave in real time while user is typing
+- [ ] Fix cursor in light mode
 
 
 ## Building from source
