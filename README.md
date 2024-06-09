@@ -24,9 +24,11 @@ Uses minimal external dependencies:
 
 ✅ Trash Section
 
-## Features to add
+## Features to add and fix
 - [ ] AutoSave in real time while user is typing
 - [ ] Fix cursor in light mode
+- [ ] Splash screen
+- [ ] Add username
 
 
 ## Building from source
